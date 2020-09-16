@@ -50,12 +50,12 @@ int main()
                 checkposition();
                  position=newposition;
             }while(position<100);
-            printf("\nCongratulation you have one in %d dice throws\n",count);
+            printf("\nCongratulation you have won in %d dice throws\n",count);
           }
         getch();
         return 0;
 }
-checkposition()
+int checkposition()
 {
     switch(position)
     {
