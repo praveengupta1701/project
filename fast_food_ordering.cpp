@@ -7,15 +7,15 @@ using namespace std;
 int main()
 {
 	string name, pizza[]={"","Capsicon","Onion     " ,"Cheese-double" ,"Creamy Max"};
-	int pizza_size_price[]={0,250,500,900};
+	int pizza_size_price[]={0,250,500,1000};
 	string roll[]={"","Veg-roll","Egg Roll","Chicken Roll"};
-	int roll_price[]={0,150,100,120};
+	int roll_price[]={0,100,200,350};
 	string bur[]={"","Ginger Burger","Chicken Burger","Veg Burger"};
-	int bur_price[]={0,180,150,160};
+	int bur_price[]={0,100,150,200};
 	string sand[]={"","Club Sandwich","Chicken Crispy Sandwich","Extream Veg Sandwich"};
-	int sand_price[]={0,240,160,100};
+	int sand_price[]={0,250,150,100};
 	string bir[]={"","Chicken Biryani","Prawn Biryani","Veg Biryani"};
-	int bir_price[]={0,160,220,140};
+	int bir_price[]={0,150,250,200};
 	string size[]={"","Small","Regular","Large"};
 	vector<pair<string,pair<int,int>>> p1_vec,r1_vec,b1_vec,s1_vec,b2_vec;
 	vector<int> p1_item,b1_item,s1_item,b2_item,r1_item;
@@ -23,12 +23,12 @@ int main()
 	int choice=0,item1=0,item2=0,item3=0,item4=0,item5=0,pizzachoice=0, quantity=0;
 	int pizza_total=0,roll_total=0,bur_total=0,sand_total=0,bir_total=0,total=0;
 	int p1_total=0,r1_total=0,b1_total=0,s1_total=0,b2_total=0;
-	system("CLS");
+	//system("CLS");
 	cout<<"\t\t\t----------Welcome to Global Fast Food Restauant-----------\n\n";
 	cout<<"Please Enter Your Name: ";
 	cin>>name;
-	cout<<"Hello "<<name<<"\nWelcome to our Global Fast Food Restauant"<<"\n\nWhat would you like to order?\n\n";
-    beginning:
+	cout<<"Hello "<<name<<"\nWelcome to our Global Fast Food Restauant\n"<<"\n\nWhat would you like to order?\n\n";
+        beginning:
 	cout<<"\t\t\t\t--------Menu--------\n\n";
 	cout<<"1) Pizzas\n";
 	cout<<"2) Burgers\n";
@@ -38,7 +38,8 @@ int main()
 	cout<<"\nPlease Enter your Choice: ";
 	cin>>choice;
 	if(choice==1)
-	 {  try_pizza:
+	 { 
+		try_pizza:
 		cout<<"\n1) "<<pizza[1]<<"\n";
 		cout<<"2) "<<pizza[2]<<"\n";
 		cout<<"3) "<<pizza[3]<<"\n";
@@ -48,7 +49,7 @@ int main()
 		if(pizzachoice>=1 && pizzachoice<=4)
 		{
 			pizzaagain:
-			cout<<"\n1) "<<size[1]<<" Rs.250\n"<<"2) "<<size[2]<<" Rs.500\n"<<"3) "<<size[3]<<" Rs.900\n";
+			cout<<"\n1) "<<size[1]<<" Rs.250\n"<<"2) "<<size[2]<<" Rs.500\n"<<"3) "<<size[3]<<" Rs.1000\n";
 			cout<<"\nChoose Size Please:";
 			cin>>item1;
 			if(item1>=1 && item1<=3)
@@ -96,9 +97,9 @@ int main()
 	 else if(choice==2)
 	 {
 	 	try_bur:
-		cout<<"\n1) "<<bur[1]<<" Rs.180"<<"\n";
+		cout<<"\n1) "<<bur[1]<<" Rs.100"<<"\n";
 		cout<<"2) "<<bur[2]<<" Rs.150"<<"\n";
-		cout<<"3) "<<bur[3]<<" Rs.160"<<"\n";
+		cout<<"3) "<<bur[3]<<" Rs.200"<<"\n";
 		cout<<"\nPlease Enter which Burger you would like to have?: ";
 		cin>>item2;
 		if(item2>=1 && item2<=3)
@@ -141,8 +142,8 @@ int main()
 	else if(choice==3)
 	 {
 	 	try_sand:
-		cout<<"\n1)  "<<sand[1]<<" Rs.240"<<"\n";
-		cout<<"2)  "<<sand[2]<<" Rs.160"<<"\n";
+		cout<<"\n1)  "<<sand[1]<<" Rs.250"<<"\n";
+		cout<<"2)  "<<sand[2]<<" Rs.150"<<"\n";
 		cout<<"3)  "<<sand[3]<<" Rs.100"<<"\n";
 		cout<<"\nPlease Enter which Sandwich you would like to have?:";
 		cin>>item3;
@@ -186,9 +187,9 @@ int main()
 	 else if(choice==4)
 	 {
 	 	try_roll:
-		cout<<"\n1) "<<roll[1]<<" Rs.150"<<"\n";
-		cout<<"2) "<<roll[2]<<" Rs.100"<<"\n";
-		cout<<"3) "<<roll[3]<<" Rs.120"<<"\n";
+		cout<<"\n1) "<<roll[1]<<" Rs.100"<<"\n";
+		cout<<"2) "<<roll[2]<<" Rs.200"<<"\n";
+		cout<<"3) "<<roll[3]<<" Rs.350"<<"\n";
 		cout<<"\nPlease Enter which you would like to have?: ";
 		cin>>item4;
 		if(item4>=1 && item4<=3)
@@ -229,9 +230,9 @@ int main()
 	else if(choice==5)
 	 {
 	 	try_bir:
-		cout<<"\n1) "<<bir[1]<<" Rs.160"<<"\n";
-		cout<<"2) "<<bir[2]<<" Rs.220"<<"\n";
-		cout<<"3) "<<bir[3]<<" Rs.140"<<"\n";
+		cout<<"\n1) "<<bir[1]<<" Rs.150"<<"\n";
+		cout<<"2) "<<bir[2]<<" Rs.250"<<"\n";
+		cout<<"3) "<<bir[3]<<" Rs.200"<<"\n";
 		cout<<"\nPlease Enter which Biryani you would like to have?:";
 		cin>>item5;
 		if(item5>=1 && item5<=3)
@@ -344,5 +345,6 @@ int main()
 	}
 	cout<<"\n\nYour Total bill is \t\t\t"<<total<<"\n\nYour Order Will be delivered in 40 Minutes";
 	cout<<"\n\n\nThank you For Ordering Food From Global Fast Food Restauant\n";
+	cout<<"\n\nWe feel Grateful for serving you\n";
     return 0;
 }
