@@ -12,7 +12,7 @@ int main()
 	int roll_price[]={0,100,200,350};
 	string bur[]={"","Ginger Burger","Chicken Burger","Veg Burger"};
 	int bur_price[]={0,100,150,200};
-	string sand[]={"","Club Sandwich","Chicken Crispy Sandwich","Extream Veg Sandwich"};
+	string sand[]={"","Club Sandwich       ","Chicken Crispy Sandwich","Extream Veg Sandwich"};
 	int sand_price[]={0,250,150,100};
 	string bir[]={"","Chicken Biryani","Prawn Biryani","Veg Biryani"};
 	int bir_price[]={0,150,250,200};
@@ -27,7 +27,7 @@ int main()
 	cout<<"\t\t\t----------Welcome to Global Fast Food Restauant-----------\n\n";
 	cout<<"Please Enter Your Name: ";
 	cin>>name;
-	cout<<"Hello "<<name<<"\nWelcome to our Global Fast Food Restauant\n"<<"\n\nWhat would you like to order?\n\n";
+	cout<<"\nHello "<<name<<"\n\nWelcome to our Global Fast Food Restauant\n"<<"\n\nWhat would you like to order?\n\n";
         beginning:
 	cout<<"\t\t\t\t--------Menu--------\n\n";
 	cout<<"1) Pizzas\n";
@@ -44,13 +44,13 @@ int main()
 		cout<<"2) "<<pizza[2]<<"\n";
 		cout<<"3) "<<pizza[3]<<"\n";
 		cout<<"4) "<<pizza[4]<<"\n";
-		cout<<"\nPlease Enter which Flavour would you like to have?:";
+		cout<<"\nPlease Enter which Flavour would you like to have?: ";
 		cin>>pizzachoice;
 		if(pizzachoice>=1 && pizzachoice<=4)
 		{
 			pizzaagain:
 			cout<<"\n1) "<<size[1]<<" Rs.250\n"<<"2) "<<size[2]<<" Rs.500\n"<<"3) "<<size[3]<<" Rs.1000\n";
-			cout<<"\nChoose Size Please:";
+			cout<<"\nChoose Size Please: ";
 			cin>>item1;
 			if(item1>=1 && item1<=3)
 			{
@@ -67,20 +67,20 @@ int main()
 				case 3: pizza_total = pizza_size_price[item1]*quantity;
 				break;
 				default:
-				cout<<"Please Enter right Choice"<<endl;
+				cout<<"Please Enter right Choice: "<<endl;
 				goto pizzaagain;
 				}
 				p1_vec.push_back({pizza[pizzachoice],{quantity,pizza_total}});
 				p1_item.push_back(item1);
 			}
 			p1_total=p1_total+pizza_total;
-			cout<<"\nWould you like to try another pizza? Y / N:";
+			cout<<"\nWould you like to try another pizza? Y / N: ";
 			cin>>gotostart;
 			if(gotostart=='Y' || gotostart=='y')
 			{
 			  goto try_pizza;
 			}
-			cout<<"\nWould you like to order anything else? Y / N:";
+			cout<<"\nWould you like to order anything else? Y / N: ";
 			cin>>gotostart;
 			if(gotostart=='Y' || gotostart=='y')
 			{
@@ -122,14 +122,14 @@ int main()
 			b1_item.push_back(item2);
 
 			b1_total=b1_total+bur_total;
-			cout<<"\nWould you like to try another burgar? Y / N:";
+			cout<<"\nWould you like to try another burgar? Y / N: ";
 			cin>>gotostart;
 			if(gotostart=='Y' || gotostart=='y')
 			{
 			  goto try_bur;
 			  //return 0;
 			}
-			cout<<"\nWould you like to order anything else? Y / N:";
+			cout<<"\nWould you like to order anything else? Y / N: ";
 			cin>>gotostart;
 			if(gotostart=='Y' || gotostart=='y')
 			{
@@ -145,7 +145,7 @@ int main()
 		cout<<"\n1)  "<<sand[1]<<" Rs.250"<<"\n";
 		cout<<"2)  "<<sand[2]<<" Rs.150"<<"\n";
 		cout<<"3)  "<<sand[3]<<" Rs.100"<<"\n";
-		cout<<"\nPlease Enter which Sandwich you would like to have?:";
+		cout<<"\nPlease Enter which Sandwich you would like to have?: ";
 		cin>>item3;
 		if(item3>=1 && item3<=3)
 		{
@@ -167,14 +167,14 @@ int main()
 			s1_item.push_back(item3);
 
 			s1_total=s1_total+sand_total;
-			cout<<"\nWould you like to try another Sandwich? Y / N:";
+			cout<<"\nWould you like to try another Sandwich? Y / N: ";
 			cin>>gotostart;
 			if(gotostart=='Y' || gotostart=='y')
 			{
 			  goto try_sand;
 			}
 
-			cout<<"\nWould you like to order anything else? Y / N:";
+			cout<<"\nWould you like to order anything else? Y / N: ";
 			cin>>gotostart;
 			if(gotostart=='Y' || gotostart=='y')
 			{
@@ -212,13 +212,13 @@ int main()
 			r1_item.push_back(item4);
 
 			r1_total=r1_total+roll_total;
-			cout<<"\nWould you like to try another Roll? Y / N:";
+			cout<<"\nWould you like to try another Roll? Y / N: ";
 			cin>>gotostart;
 			if(gotostart=='Y' || gotostart=='y')
 			{
 			  goto try_roll;
 			}
-			cout<<"\nWould you like to order anything else? Y / N:";
+			cout<<"\nWould you like to order anything else? Y / N: ";
 			cin>>gotostart;
 			if(gotostart=='Y' || gotostart=='y')
 			{
@@ -233,7 +233,7 @@ int main()
 		cout<<"\n1) "<<bir[1]<<" Rs.150"<<"\n";
 		cout<<"2) "<<bir[2]<<" Rs.250"<<"\n";
 		cout<<"3) "<<bir[3]<<" Rs.200"<<"\n";
-		cout<<"\nPlease Enter which Biryani you would like to have?:";
+		cout<<"\nPlease Enter which Biryani you would like to have?: ";
 		cin>>item5;
 		if(item5>=1 && item5<=3)
 		{
@@ -255,13 +255,13 @@ int main()
 			b2_item.push_back(item5);
 
 			b2_total=b2_total+bir_total;
-			cout<<"\nWould you like to try another biryani? Y / N:";
+			cout<<"\nWould you like to try another biryani? Y / N: ";
 			cin>>gotostart;
 			if(gotostart=='Y' || gotostart=='y')
 			{
-			  goto try_bur;
+			  goto try_bir;
 			}
-			cout<<"\nWould you like to order anything else? Y / N:";
+			cout<<"\nWould you like to order anything else? Y / N:  ";
 			cin>>gotostart;
 			if(gotostart=='Y' || gotostart=='y')
 			{
@@ -285,7 +285,7 @@ int main()
 	cout<<endl<<"\n\n";
 	if(item1!=0)
 	{	
-		cout<<"Pizza Flavour"<<"\t"<<"Quantity"<<"\t"<<"Size"<<"\t"<<"Price"<<"\t"<<"Total\n";
+		cout<<"Pizza Flavour"<<"\t"<<"Quantity"<<"\t"<<"Size"<<"\t"<<"Price"<<"\t"<<"Total\n\n";
 		int k=0;
 		for(const auto &p : p1_vec)
         {
@@ -297,7 +297,7 @@ int main()
 	}
 	if(item2!=0)
 	{
-		cout<<"\nBurgar Type"<<"\t"<<"Quantity"<<"\t"<<"Price"<<"\t"<<"Total\n";
+		cout<<"\nBurgar Type"<<"\t"<<"Quantity"<<"\t"<<"Price"<<"\t"<<"Total\n\n";
 		int k=0;
 		for(const auto &p : b1_vec)
         {
@@ -309,7 +309,7 @@ int main()
 	}
 	if(item3!=0)
 	{
-		cout<<"\nSandwich Type"<<"\t"<<"Quantity"<<"\t"<<"Price"<<"\t"<<"Total\n";
+		cout<<"\nSandwich Type"<<"\t"<<"Quantity"<<"\t"<<"Price"<<"\t"<<"Total\n\n";
 		int k=0;
 		for(const auto &p : s1_vec)
         {
@@ -321,7 +321,7 @@ int main()
 	}
 	if(item4!=0)
 	{
-		cout<<"\nRoll Type"<<"\t"<<"Quantity"<<"\t"<<"Price"<<"\t"<<"Total\n";
+		cout<<"\nRoll Type"<<"\t"<<"Quantity"<<"\t"<<"Price"<<"\t"<<"Total\n\n";
 		int k=0;
 		for(const auto &p : r1_vec)
         {
@@ -333,7 +333,7 @@ int main()
 	}
 	if(item5!=0)
 	{
-		cout<<"\nBiryani Type"<<"\t"<<"Quantity"<<"\t"<<"Price"<<"\t"<<"Total\n";
+		cout<<"\nBiryani Type"<<"\t"<<"Quantity"<<"\t"<<"Price"<<"\t"<<"Total\n\n";
 		int k=0;
 		for(const auto &p : b2_vec)
         {
@@ -344,7 +344,7 @@ int main()
 		total=total+b2_total;
 	}
 	cout<<"\n\nYour Total bill is \t\t\t"<<total<<"\n\nYour Order Will be delivered in 40 Minutes";
-	cout<<"\n\n\nThank you For Ordering Food From Global Fast Food Restauant\n";
-	cout<<"\n\nWe feel Grateful for serving you\n";
+	cout<<"\n\n\nThank you For Ordering Fast Food From Global Fast Food Restauant\n";
+	cout<<"\n\nWe feel very grateful for serving you\n";
     return 0;
 }
