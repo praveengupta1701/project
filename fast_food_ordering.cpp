@@ -17,9 +17,11 @@ int main()
 	string bir[]={"","Chicken Biryani","Prawn Biryani","Veg Biryani"};
 	int bir_price[]={0,150,250,200};
 	string size[]={"","Small","Regular","Large"};
+
 	vector<pair<string,pair<int,int>>> p1_vec,r1_vec,b1_vec,s1_vec,b2_vec;
 	vector<int> p1_item,b1_item,s1_item,b2_item,r1_item;
 	vector<pair<string,int>> total_vec;
+
 	char gotostart ;
 	int choice=0,item1=0,item2=0,item3=0,item4=0,item5=0,pizzachoice=0, quantity=0;
 	int pizza_total=0,roll_total=0,bur_total=0,sand_total=0,bir_total=0,total=0;
@@ -29,7 +31,9 @@ int main()
 	cout<<"Please Enter Your Name: ";
 	cin>>name;
 	cout<<"\nHello "<<name<<"\n\nWelcome to our Global Fast Food Restauant\n"<<"\n\nWhat would you like to order?\n\n";
-        beginning:
+
+    beginning:
+
 	cout<<"\n\t\t\t\t--------Menu--------\n\n";
 	cout<<"1) Pizzas\n";
 	cout<<"2) Burgers\n";
@@ -68,9 +72,11 @@ int main()
 
 				case 3: pizza_total = pizza_size_price[item1]*quantity;
 				break;
+
 				default:
 				cout<<"Please Enter right Choice: "<<endl;
 				goto pizza_again;
+
 				}
 				p1_vec.push_back({pizza[pizzachoice],{quantity,pizza_total}});
 				p1_item.push_back(item1);
@@ -100,8 +106,6 @@ int main()
 		  goto try_pizza;
 		}
 	 }
-
-
 	 else if(choice==2)
 	 {
 	 	try_bur:
@@ -135,14 +139,12 @@ int main()
 			if(gotostart=='Y' || gotostart=='y')
 			{
 			  goto try_bur;
-			  //return 0;
 			}
 			cout<<"\nWould you like to order anything else? Y / N: ";
 			cin>>gotostart;
 			if(gotostart=='Y' || gotostart=='y')
 			{
 			  goto beginning;
-			  //return 0;
 			}
 
 		}
@@ -200,8 +202,6 @@ int main()
 		  goto try_sand;
 		}
 	}
-
-
 	 else if(choice==4)
 	 {
 	 	try_roll:
@@ -309,7 +309,6 @@ int main()
 		  goto beginning;
 		}
 	}
-
 	cout<<endl<<"\n\n";
 	cout<<"\n\n--------------------------------------------------------------------------\n\n";
 	if(item1!=0)
@@ -383,9 +382,9 @@ int main()
 		total_vec.push_back({"Total Biryani Bill",b2_total});
 		cout<<"\n\n--------------------------------------------------------------------------\n\n";
 	}
+	
 	cout<<"\n**************************************************************************";
-	cout<<"\n**************************************************************************\n";
-
+	cout<<"\n**************************************************************************";
 	cout<<"\n\nFast Food\t\tGrand total\n\n";
 	for(const auto &p : total_vec)
         {
